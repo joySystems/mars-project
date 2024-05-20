@@ -26,9 +26,10 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
         patterns: [
-          { from: 'src/images', to: 'dist/images' },
-          { from: 'src/fonts', to: 'dist/fonts' },
-          { from: 'src/index.html', to: 'dist' },
+          { from: 'src/images', to: 'images' },
+          { from: 'src/video', to: 'video' },
+          { from: 'src/fonts', to: 'fonts' },
+         
         ],
       }),
 
