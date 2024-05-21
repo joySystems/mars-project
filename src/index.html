@@ -14,29 +14,32 @@
 
 <body>
     <div class="container">
+
+
         <header class="header">
             <div class="logo">
                 <a href="/" class="logo__text bebas-neue-bold">MARS</a>
             </div>
             <nav class="nav-container">
                 <ul class="menu">
-                    <li class="menu__item"><a href="http://">О МАРСЕ</a></li>
-                    <li class="menu__item"><a href="http://">ПРОЦЕСС</a></li>
-                    <li class="menu__item"><a href="http://">БИЛЕТЫ</a></li>
-                    <li class="menu__item"><a href="http://">НОВОСТИ</a></li>
-                    <li class="menu__item"><a href="http://">КОНТАКТЫ</a></li>
+                    <li class="menu__item"><a href="#">О МАРСЕ</a></li>
+                    <li class="menu__item"><a href="#">ПРОЦЕСС</a></li>
+                    <li class="menu__item"><a href="#">БИЛЕТЫ</a></li>
+                    <li class="menu__item"><a href="#">НОВОСТИ</a></li>
+                    <li class="menu__item"><a href="#">КОНТАКТЫ</a></li>
                 </ul>
                 <button class="btn btn__header">Купить билеты</button>
             </nav>
         </header>
         <main>
             <div class="title-container">
-                <svg width="10" height="605" viewBox="0 0 10 605" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 3H6V600H4V3Z" fill="#D9D9D9" />
-                    <path
+                <svg class="animated-svg" width="10" height="605" viewBox="0 0 10 605" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="line" d="M4 3H6V600H4V3Z" fill="#D9D9D9" />
+                    <path class="small-dot"
                         d="M8 3C8 4.65685 6.65685 6 5 6C3.34315 6 2 4.65685 2 3C2 1.34315 3.34315 0 5 0C6.65685 0 8 1.34315 8 3Z"
                         fill="#D9D9D9" />
-                    <path
+                    <path class="large-dot"
                         d="M10 600C10 602.761 7.76142 605 5 605C2.23858 605 0 602.761 0 600C0 597.239 2.23858 595 5 595C7.76142 595 10 597.239 10 600Z"
                         fill="#D9D9D9" />
                 </svg>
@@ -57,21 +60,7 @@
 
 
                         </svg>
-                        <!-- <svg width="1145" height="513" viewBox="0 0 1145 513" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1144.66 386.837C1144.66 427.368 1134.64 458.601 1114.62 480.536C1094.59 501.993 1065.5 512.722 1027.36 512.722C989.209 512.722 960.122 501.993 940.095 480.536C920.067 458.601 910.054 427.368 910.054 386.837V126.484C910.054 85.9533 920.067 54.9589 940.095 33.5012C960.122 11.5668 989.209 0.599548 1027.36 0.599548C1065.5 0.599548 1094.59 11.5668 1114.62 33.5012C1134.64 54.9589 1144.66 85.9533 1144.66 126.484V175.122H1070.27V121.478C1070.27 88.5759 1056.68 72.125 1029.5 72.125C1002.32 72.125 988.732 88.5759 988.732 121.478V391.844C988.732 424.269 1002.32 440.481 1029.5 440.481C1056.68 440.481 1070.27 424.269 1070.27 391.844V320.318H1144.66V386.837Z"
-                                fill="white" />
-                            <path
-                                d="M773.474 6.32156C812.574 6.32156 841.9 16.812 861.45 37.7928C881 58.7736 890.776 89.5295 890.776 130.061V195.149C890.776 235.68 881 266.436 861.45 287.417C841.9 308.398 812.574 318.888 773.474 318.888H736.28V507H657.602V6.32156H773.474ZM736.28 247.362H773.474C786.348 247.362 795.885 243.786 802.084 236.634C808.76 229.481 812.098 217.322 812.098 200.156V125.054C812.098 107.888 808.76 95.7284 802.084 88.5759C795.885 81.4233 786.348 77.8471 773.474 77.8471H736.28V247.362Z"
-                                fill="white" />
-                            <path
-                                d="M552.298 507L538.708 416.163H442.149L428.559 507H356.318L436.427 6.32156H551.583L631.691 507H552.298ZM527.979 348.213L490.071 95.0132L452.162 348.213H527.979Z"
-                                fill="white" />
-                            <path
-                                d="M221.124 6.32156H330.558V507H256.171V147.942L201.812 507H127.425L68.7744 152.949V507H0.10997V6.32156H109.544L167.48 361.803L221.124 6.32156Z"
-                                fill="white" />
-                        </svg> -->
+
                     </div>
                 </div>
 
@@ -81,13 +70,44 @@
         <footer>
 
         </footer>
-        <div class="popup">
+        <div class="popup" style="display:none;">
             <div class="popup-form-container">
                 <div class="popup-form-title">
                     Бронирование<br>
                     билетов
                 </div>
-                <form action="popup-form" class=""></form>
+                <form action="popup-form" method="post" class="popup-form">
+                    <div class="inputs-wrapper">
+                        <div class="input-wrapper">
+
+                            <label class="montserrat-bold" for="arrival-date">Дата заезда</label>
+                            <input type="text" id="arrival-date" name="arrival" placeholder="13.05.2022">
+                        </div>
+                        <div class="input-wrapper">
+
+                            <label class="montserrat-bold" for="departure-date">Дата выезда</label>
+                            <input type="text" id="departure-date" name="departure" placeholder="13.05.2032">
+                        </div>
+
+
+                        <div class="input-wrapper">
+                            <label class="montserrat-bold" for="quantity">Количество</label>
+                            <input type="number" id="quantity" name="quantity" placeholder="1 человек">
+
+                        </div>
+
+                    </div>
+                    <div class="submit-wrapper">
+
+                        <button type="submit">Купить билеты</button>
+                    </div>
+
+
+
+
+
+
+                </form>
                 <div class="popup-close-btn">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1.71429L1.71429 4.08718e-07L12 10.2857L10.2857 12L0 1.71429Z" fill="#D9D9D9" />
@@ -97,7 +117,7 @@
                 </div>
             </div>
         </div>
-
+        <div class="haze"></div>
     </div>
 </body>
 
