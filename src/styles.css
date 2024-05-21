@@ -386,22 +386,22 @@ transition: all 0.4s ease-in-out;
     top: 0;
 }
 
-@keyframes slideIn {
+@keyframes slideInPop {
     from { top: -100%; }
     to { top: 0; }
 }
 
-@keyframes slideOut {
+@keyframes slideOutPop {
     from { top: 0; }
     to { top: -100%; }
 }
 
 .popup-anim-in {
-    animation: slideIn 0.5s forwards;
+    animation: slideInPop 0.5s forwards;
 }
 
 .popup-anim-out {
-    animation: slideOut 0.5s forwards;
+    animation: slideOutPop 0.5s forwards;
 }
 
   .popup-form-container {
@@ -520,7 +520,7 @@ margin-bottom: 6rem;
   
   opacity: 0;
   transform: translateY(-100%);
-  animation: fadeIn 2s forwards, slideIn 2s forwards;
+  animation: fadeIn 2s forwards, slideInSvg 2s forwards;
 }
 
 @keyframes fadeIn {
@@ -529,7 +529,7 @@ margin-bottom: 6rem;
   }
 }
 
-@keyframes slideIn {
+@keyframes slideInSvg {
   to {
       transform: translateY(0);
   }
