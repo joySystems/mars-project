@@ -253,7 +253,11 @@ body {
 
 }
 
-.menu__item a:hover {
+.menu__item a:visited {
+  color: #F2E1C2;
+}
+
+.menu__item a:visited:hover, .menu__item a:hover {
   color: #F23207;
   transition: all 0.4s ease-in-out;
 }
@@ -262,9 +266,7 @@ body {
   color: #F23207;
 }
 
-.menu__item a:visited {
-  color: #F23207;
-}
+
 
 .btn {
   padding: 1rem 1.5rem;
