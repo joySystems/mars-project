@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+<script defer src="index.624fadb191b0e590fcbb.js"></script></head>
+
+<body>
+    <div class="container">
+
+
+        <header class="header">
+            <div class="logo">
+                <a href="/" class="logo__text bebas-neue-bold">MARS</a>
+            </div>
+            <nav class="nav-container">
+                <ul class="menu">
+                    <li class="menu__item"><a href="#">О МАРСЕ</a></li>
+                    <li class="menu__item"><a href="#">ПРОЦЕСС</a></li>
+                    <li class="menu__item"><a href="#">БИЛЕТЫ</a></li>
+                    <li class="menu__item"><a href="#">НОВОСТИ</a></li>
+                    <li class="menu__item"><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+                <button class="btn btn__header">Купить билеты</button>
+            </nav>
+            <button class="burger-menu">
+                <span class="burger-menu__line"></span>
+                <span class="burger-menu__line"></span>
+                <span class="burger-menu__line"></span>
+            </button>
+            <div class="mobile-menu">
+                <div class="mobile-menu__header">
+                    <div class="logo">
+                        <a href="/" class="logo__text bebas-neue-bold">MARS</a>
+                    </div>
+                    <button class="close-menu">✕</button>
+                </div>
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item"><a href="#">О МАРСЕ</a></li>
+                    <li class="mobile-menu__item"><a href="#">ПРОЦЕСС</a></li>
+                    <li class="mobile-menu__item"><a href="#">БИЛЕТЫ</a></li>
+                    <li class="mobile-menu__item"><a href="#">НОВОСТИ</a></li>
+                    <li class="mobile-menu__item"><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+                <button class="btn btn__mobile btn__header">Купить билеты</button>
+            </div>
+        </header>
+        <main>
+            <div class="title-container">
+                <svg class="animated-svg" width="10" height="605" viewBox="0 0 10 605" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="line" d="M4 3H6V600H4V3Z" fill="#D9D9D9" />
+                    <path class="small-dot"
+                        d="M8 3C8 4.65685 6.65685 6 5 6C3.34315 6 2 4.65685 2 3C2 1.34315 3.34315 0 5 0C6.65685 0 8 1.34315 8 3Z"
+                        fill="#D9D9D9" />
+                    <path class="large-dot"
+                        d="M10 600C10 602.761 7.76142 605 5 605C2.23858 605 0 602.761 0 600C0 597.239 2.23858 595 5 595C7.76142 595 10 597.239 10 600Z"
+                        fill="#D9D9D9" />
+                </svg>
+                <div class="title">
+                    <div class="suptitle">
+                        Точка назначения:
+                    </div>
+                    <div class="title__mask">
+                        <video class="video-bg" loop muted autoplay>
+                            <source src="video/Mars.m4v" type="video/mp4">
+                        </video>
+                        <svg height="100%" width="100%">
+                            <clipPath id="text-overlay" height="100%" width="100%">
+                                <text id="title" x="-2rem">
+                                    МАРС
+                                </text>
+                            </clipPath>
+
+
+                        </svg>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+        <div class="popup" style="display:none;">
+            <div class="popup-form-container">
+                <div class="popup-form-title">
+                    Бронирование<br>
+                    билетов
+                </div>
+                <form action="popup-form" method="post" class="popup-form">
+                    <div class="inputs-wrapper">
+                        <div class="input-wrapper">
+
+                            <label class="montserrat-bold" for="arrival-date">Дата заезда</label>
+                            <input type="text" id="arrival-date" name="arrival" placeholder="13.05.2022">
+                        </div>
+                        <div class="input-wrapper">
+
+                            <label class="montserrat-bold" for="departure-date">Дата выезда</label>
+                            <input type="text" id="departure-date" name="departure" placeholder="13.05.2032">
+                        </div>
+
+
+                        <div class="input-wrapper">
+                            <label class="montserrat-bold" for="quantity">Количество</label>
+                            <input type="number" id="quantity" name="quantity" placeholder="1 человек">
+
+                        </div>
+
+                    </div>
+                    <div class="submit-wrapper">
+
+                        <button type="submit">Купить билеты</button>
+                    </div>
+                </form>
+                <div id="form-message"></div>
+                <div class="popup-close-btn">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1.71429L1.71429 4.08718e-07L12 10.2857L10.2857 12L0 1.71429Z" fill="#D9D9D9" />
+                        <path d="M1.71429 12L0 10.2857L10.2857 0L12 1.71429L1.71429 12Z" fill="#D9D9D9" />
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+        <div class="haze"></div>
+    </div>
+</body>
+
+</html>
