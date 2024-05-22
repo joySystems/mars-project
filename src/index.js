@@ -43,6 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(container.style.backgroundPosition);
     });
 
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
+
+    burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
 });
 
 window.addEventListener('load', function() {

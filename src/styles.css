@@ -277,6 +277,112 @@ transition: all 0.4s ease-in-out;
     background-color: #F23207;
   }
 
+
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 101; /* Должен быть выше, чем у title-container */
+}
+
+.burger-menu__line {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #F2E1C2;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+}
+
+.mobile-menu__header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-menu__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 100px; /* Отступ сверху, чтобы не перекрывать логотип */
+}
+
+.mobile-menu__item {
+    margin: 1rem 0;
+}
+
+.mobile-menu__item a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.btn__mobile {
+    margin-top: 2rem;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+@media (max-width: 768px) {
+
+  .header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-top: 3rem;
+    position: relative;
+    z-index: 30;
+    padding: 1rem 3rem;
+  }
+
+
+
+    .nav-container {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+
   main{
     display: flex;
     width: 100%;
@@ -300,7 +406,7 @@ transition: all 0.4s ease-in-out;
         gap: 2.5rem;
         position: relative;
     overflow: hidden;
-    
+    z-index: 30;
   }
 
   .title{
@@ -309,10 +415,10 @@ transition: all 0.4s ease-in-out;
         display: flex;
         width: 100%;
         flex-direction: column;
-        
+        position: relative;
         justify-content: space-between;
         align-items: flex-start;
-        
+        z-index: 30;
   }
 
   .suptitle{
@@ -326,6 +432,8 @@ transition: all 0.4s ease-in-out;
     opacity: 0;
     animation: fadeIn 2s forwards 0.5s; /* 0.5s задержка перед началом анимации */
     margin-top:1.6rem;
+    z-index: 30;
+    position: relative;
   }
 
  
